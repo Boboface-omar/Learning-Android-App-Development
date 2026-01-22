@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Conteneur Principal-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tvResultat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
+    android:padding="20dp"
     tools:context=".MainActivity">
+
+<!--    Ajout d'image-->
+
+    <ImageView
+        android:layout_width="233dp"
+        android:layout_height="304dp"
+        android:layout_gravity="center"
+        android:src="@drawable/obj"
+        app:layout_constraintBottom_toTopOf="@+id/tvMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bonjour Android"
-        android:textSize="20sp"
+        android:text="Bonjour Oumar"
+        android:textSize="30sp"
+        android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +40,8 @@
         android:layout_width="109dp"
         android:layout_height="54dp"
         android:text="Button"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +55,8 @@
         android:ems="10"
         android:hint="Entrez votre message"
         android:inputType="text"
-        android:text=""
+        android:textColor="#FFFFFF"
+        android:textColorHint="#CCCCCC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

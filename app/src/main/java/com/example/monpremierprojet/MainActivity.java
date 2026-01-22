@@ -2,6 +2,7 @@ package com.example.monpremierprojet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,5 +65,24 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+//    Le Cycle de Vie d'une activité
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("CycleVie", "L'activité est DÉMARRÉE (onStart)");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("CycleVie", "L'activité est STOPPÉE (onStop) - Elle dort");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("CycleVie", "L'activité est DÉTRUITE (onDestroy) - Elle est morte");
     }
 }
